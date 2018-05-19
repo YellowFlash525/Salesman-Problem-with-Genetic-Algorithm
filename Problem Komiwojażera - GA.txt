@@ -1,0 +1,49 @@
+++++++++++++++++++++++++++++++ Problem Komiwojażera przy użyciu Algorytmu Genetycznego ++++++++++++++++++++++++++++++
+
+1. Problem Komiwojażera
+  Zagadnienie polegające na znalezieniu minimalnego cyklu Hamiltona w pełnym grafie ważonym
+  Dane jest n miast, które komiwojażer ma odwiedzić, oraz odległość / cena podróży / czas podróży pomiędzy każdą parą miast. 
+  Celem jest znalezienie najkrótszej/najtańszej/najszybszej drogi łączącej wszystkie miasta, zaczynającej się i kończącej się w określonym punkcie
+
+2. Cykl Hamiltona - to taki cykl w grafie, w którym każdy wierzchołek grafu odwiedzany jest dokładnie raz (oprócz pierwszego wierzchołka).
+
+3. Algorytm Genetyczny - sposób działania
+
+4. Budowa pliku .py
+  - class City
+    * __init__ -> constructor
+    * getX() - zwraca pozycje x miasta
+    * getY() - zwraca pozycje y miasta
+    * distanceTo() - zwraca dystans do określonego miasta
+    * __repr__() = zwraca pozycje miasta
+  - class Tour
+    * __init__() - contructor
+    * __len__() - zwraca dlugość trasy
+    * __getitem__() - return element of tour list
+    * __setitem__() - set value for element of tour list by index 
+    * __repr__() - wyświelta reprezentacje obiektu
+    * generateIndividual() - ustawianie i przetasowanie(przemieszanie) na nowo) 
+    * getCity() - zwracanie miasta o z listy tour
+    * setCity() - ustawianie miasta na odpowiednim  miejscu w liscie tour  miasta 
+    * getFitness() - obliczanie wartości fitness dla Tour na bazie dystansu pomiedzy 
+    * getDistance() - określenie dystansu miedzy miastami
+    * tourSize() - rozmiar listy z miastami na danej trasie
+    * containsCity() - określenie czy lista zawiera miasto na scieżce
+  - class TourManager
+    * addCity() - dodaje miasto do listy miast, które trzeba odwiedzić 
+    * getCity() - zwróć miasto z listy po indexie
+    * numberOfCities() - zwróć liczbe miast które należy odwiedzić
+  - class Population
+    * __init__() - constructor
+    * __setitem__() - wrzucanie scieżki do listy scieżek
+    * __getitem__() - pobieranie scieżki z listy scieżek
+    * saveTour() - zapisywanie ścieżki w liście scieżek
+    * getTour() - pobieranie scieżki z listy scieżek
+    * getFittest() - obliczanie parametru fittest na bazie fitness wyliczonego dla określonej ścieżki
+    * populationSize() - zwraca rozmiar populacji
+  - class GA(Genetic Algorithm)
+    * __init__() - constructor
+    * evolvePopulation()
+    * crossover()
+    * mutate()
+    * tournamentSelection()
