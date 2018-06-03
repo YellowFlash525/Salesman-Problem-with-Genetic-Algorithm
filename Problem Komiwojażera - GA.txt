@@ -9,7 +9,7 @@
 
 3. Algorytm Genetyczny - sposób działania
 
-4. Budowa pliku .py
+4. Budowa plików .py
   - class City
     * __init__ -> constructor
     * getX() - zwraca pozycje x miasta
@@ -42,7 +42,7 @@
     * getFittest() - obliczanie parametru fittest na bazie fitness wyliczonego dla określonej ścieżki
     * populationSize() - zwraca rozmiar populacji
   - class GA(Genetic Algorithm)
-    * __init__() - constructor
+    * __init__()
     * evolvePopulation()
     * crossover()
     * mutate()
